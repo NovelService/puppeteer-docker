@@ -10,7 +10,7 @@ See this article: https://ndportmann.com/chrome-in-docker/
 ## Security options
 The required system calls are explicitly added to a whitelist.
 Use `docker run --security-opt seccomp=seccomp.json` with the provided [seccomp.json](./seccomp.json).
-It is based on [Moby's default](https://github.com/moby/moby/blob/eddbd6ff1ebf3df92129cc301d00693381f89d64/profiles/seccomp/default.json) taken one 21.01.2021 and extended with the required calls
+It is based on [Moby's default](https://github.com/moby/moby/blob/eddbd6ff1ebf3df92129cc301d00693381f89d64/profiles/seccomp/default.json) taken on 21.01.2021 and extended with the required calls
 `arch_prctl chroot clone fanotify_init name_to_handle_at open_by_handle_at setdomainname sethostname syslog unshare vhangup setns` [source](https://github.com/docker/for-linux/issues/496#issuecomment-441149510)
 
 ## Linux capabilities
